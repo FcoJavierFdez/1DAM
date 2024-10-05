@@ -1,0 +1,388 @@
+
+Francisco Javier@DESKTOP-30L1KT9 MINGW64 ~/mi-proyecto (master)
+$ git branch -d feature1
+Deleted branch feature1 (was 3ee1638).
+
+Francisco Javier@DESKTOP-30L1KT9 MINGW64 ~/mi-proyecto (master)
+$ git branch -d feature2
+Deleted branch feature2 (was e21d6e9).
+
+Francisco Javier@DESKTOP-30L1KT9 MINGW64 ~/mi-proyecto (master)
+$ git branch -d feature3
+Deleted branch feature3 (was e21d6e9).
+
+Francisco Javier@DESKTOP-30L1KT9 MINGW64 ~/mi-proyecto (master)
+$ git log
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+:...skipping...
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+
+    primer parrafo
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+:
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+:
+ commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+:
+ commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+:
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+:
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+:
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+:
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+
+    primer parrafo
+~
+~
+~
+~
+~
+~
+(END)
+commit d7929ce08d67e6573208d3fc0badf382e95d9cb3 (HEAD -> master, origin/master, develop)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:36:28 2023 +0100
+
+    Ultimo cambio
+
+commit bc558caccca86a88341d5410b714c480a968d7f5
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:30:16 2023 +0100
+
+    Ultimo cambio
+
+commit e21d6e9428dd8bf2ad405eff4acf71078ad2fbc9 (origin/feature3, origin/feature2)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 21:11:23 2023 +0100
+
+    Agrego archivo
+    pruebas2.html
+
+commit 3ee1638884cb7fdc477f5652a9cbd5fc30df0534 (origin/feature1)
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:32:03 2023 +0100
+
+    Agrego archivo feature1.html
+
+commit 28c88f6b713c370f24939a592c87ca8e2f8c72af
+Author: FcoJavierFdez <fdezfcojavier@gmail.com>
+Date:   Wed Nov 29 20:26:54 2023 +0100
+
+    primer parrafo
+~
+~
+~
+~
+~
+~
+~
+~
+~
+(END)

@@ -1,0 +1,1019 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="google-site-verification" content="3xIl6rwvbZFMPw2Os_ecSGlPPwrQuE11U5J9Ko2bbas"/>
+<meta property="fb:pages" content="411445362304338"/>
+<title>Introducción a POO en Java: Objetos y clases | OpenWebinars</title>
+<link rel="shortcut icon" href="/static/public/images/favicons/favicon.ico" sizes="64x64"/>
+<link rel="apple-touch-icon" sizes="57x57" href="/static/public/images/favicons/xapple-icon-57x57.png.pagespeed.ic.7OyWpP5A5m.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/static/public/images/favicons/xapple-icon-60x60.png.pagespeed.ic.ZMuOsdKt-v.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/static/public/images/favicons/xapple-icon-72x72.png.pagespeed.ic.0cXT2U6yaP.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/static/public/images/favicons/xapple-icon-76x76.png.pagespeed.ic.QHd8G2Ux1F.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/static/public/images/favicons/xapple-icon-114x114.png.pagespeed.ic.r6hpd2VPcl.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/static/public/images/favicons/xapple-icon-120x120.png.pagespeed.ic.OVXVsTsPTv.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/static/public/images/favicons/xapple-icon-144x144.png.pagespeed.ic.Wzcew6WsKz.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/static/public/images/favicons/xapple-icon-152x152.png.pagespeed.ic.a775KmHNKE.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/static/public/images/favicons/xapple-icon-180x180.png.pagespeed.ic.oxc1O9U2mj.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/static/public/images/favicons/xandroid-icon-192x192.png.pagespeed.ic.YqIlxLO7kC.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/static/public/images/favicons/xfavicon-32x32.png.pagespeed.ic.1RPJ6u4vm4.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/static/public/images/favicons/xfavicon-96x96.png.pagespeed.ic.tLHiIT3X4K.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/static/public/images/favicons/xfavicon-16x16.png.pagespeed.ic.eLdmBrJyTZ.png">
+<link rel="manifest" href="/static/public/images/favicons/manifest.json">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/static/public/images/favicons/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases/"/>
+<meta name="description" content="Conoce el núcleo de la Programación Orientada a Objetos en Java: las clases y los objetos, y comienza a profundizar en la POO con este post introductorio."/>
+<!-- Google Authorship and Publisher Markup -->
+<link type="text/plain" rel="author" href="http://openwebinars.net/humans.txt"/>
+<link rel="alternate" type="application/rss+xml" title="OpenWebinars.net &raquo; Feed" href="/feed"/>
+<!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@openwebinarsnet">
+<meta name="twitter:title" content="Introducción a POO en Java: Objetos y clases">
+<meta name="twitter:description" content="Conoce el núcleo de la Programación Orientada a Objetos en Java: las clases y los objetos, y comienza a profundizar en la POO con este post introductorio.">
+<meta name="twitter:creator" content="@openwebinarsnet">
+<!-- Twitter summary card with large image must be at least 280x150px -->
+<meta name="twitter:image" content="https://cdn.openwebinars.net/media/featured_images/poo-java-objetos-RRSS.webp">
+<!-- Open Graph data -->
+<meta property="og:title" content="Introducción a POO en Java: Objetos y clases"/>
+<meta property="og:locale" content="es_ES"/>
+<meta property="og:type" content="article"/>
+<meta property="og:url" content="https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases/"/>
+<meta property="og:image" content="https://cdn.openwebinars.net/media/featured_images/poo-java-objetos-RRSS.webp"/>
+<meta property="og:description" content="Conoce el núcleo de la Programación Orientada a Objetos en Java: las clases y los objetos, y comienza a profundizar en la POO con este post introductorio."/>
+<meta property="og:site_name" content="OpenWebinars.net"/>
+<meta property="article:published_time" content="2023-10-27T13:00:00+02:00"/>
+<meta id="published_time" property="article:modified_time" content="2023-10-27T12:39:04.759392+02:00"/>
+<meta property="fb:admins" content="100001483111976"/>
+<meta property="fb:app_id" content="618927021547911"/>
+<link rel="stylesheet" type="text/css" href="/static/public/css/main.css?rev=f79dc3e87"/>
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-light.min.css">
+<style>.copy-clipboard .clipboard-icon{pointer-events:none}.copy-clipboard{position:relative}.copy-clipboard .feedback{position:absolute;top:2px;left:0;transform:translateX(-100%);opacity:0;visibility:hidden}</style>
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Introducción a POO en Java: Objetos y clases",
+    "image": [
+      "https://cdn.openwebinars.net/media/featured_images/poo-java-objetos-RRSS.webp"
+      ],
+    "datePublished": "2023-10-27T13:00:00+02:00",
+    "dateModified": "2023-10-27T12:39:04.759392+02:00",
+    "author": [{
+        "@type": "Person",
+        "name": "Jorge López Blasco",
+        "url": "https://openwebinars.net/autor/jorge-lopez-blasco/"
+      }]
+  }
+</script>
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{
+      "@type": "ListItem",
+      "position": 1,
+      "item": {
+      "@id": "https://openwebinars.net/",
+      "name": "OpenWebinars"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 2,
+    "item": {
+      "@id": "https://openwebinars.net/blog/",
+      "name": "Blog de programación y sistemas"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 3,
+    "item": {
+      "@id": "https://openwebinars.net/blog/tecnologia/",
+      "name": "Tecnología"
+    }
+  },{
+    "@type": "ListItem",
+    "position": 4,
+    "item": {
+      "@id": "https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases/",
+      "name": "Introducción a POO en Java: Objetos y clases"
+    }
+  }]
+}
+</script>
+<link rel="amphtml" href="https://openwebinars.net/amp/blog/introduccion-a-poo-en-java-objetos-y-clases/"/>
+<!-- GTM Variables -->
+<script>var dataLayer=[{'environment':'Live'}];var algolia_blog_index="Posts";var algolia_search_index="Contenidos";var algolia_api_key="N2JmNjc0MjQxMTNhODZmYmMxZmM1ZjU2ZjcyM2Q4N2VhZjRiYjkzMmZkYjdhZTU3ZWZmNTI2MzQ5ZjdjYWFiOGZpbHRlcnM9dmlzaWJsZV9ieSUzQXB1YmxpYytPUittb2RlbCUzQVBvc3QmdmFsaWRVbnRpbD0xNzA5NTQ5Njg5";var algolia_app_id="4A1XUQU3F2";var trackcmp_email='';var user_is_authenticated=false;dataLayer.push({'user-role':''});dataLayer.push({'active_subscription':false});dataLayer.push({'active_plan':''});</script>
+<script>dataLayer.push({'post_category':['tecnologia']});</script>
+<!-- anti-flicker snippet (recommended)  -->
+<style>.async-hide{opacity:0!important}</style>
+<script>(function(a,s,y,n,c,h,i,d,e){s.className+=' '+y;h.start=1*new Date;h.end=i=function(){s.className=s.className.replace(RegExp(' ?'+y),'')};(a[n]=a[n]||[]).hide=h;setTimeout(function(){i();h.end=null},c);h.timeout=c;})(window,document.documentElement,'async-hide','dataLayer',100,{'GTM-NP7728':true});</script>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-NP7728');</script>
+<!-- End Google Tag Manager -->
+<!-- Start VWO Async SmartCode -->
+<link rel="preconnect" href="https://dev.visualwebsiteoptimizer.com"/>
+<script id='vwoCode'>window._vwo_code||(function(){var account_id=787399,version=2.0,settings_tolerance=2000,hide_element='body',hide_element_style='opacity:0 !important;filter:alpha(opacity=0) !important;background:none !important',f=false,w=window,d=document,v=d.querySelector('#vwoCode'),cK='_vwo_'+account_id+'_settings',cc={};try{var c=JSON.parse(localStorage.getItem('_vwo_'+account_id+'_config'));cc=c&&typeof c==='object'?c:{}}catch(e){}var stT=cc.stT==='session'?w.sessionStorage:w.localStorage;code={use_existing_jquery:function(){return typeof use_existing_jquery!=='undefined'?use_existing_jquery:undefined},library_tolerance:function(){return typeof library_tolerance!=='undefined'?library_tolerance:undefined},settings_tolerance:function(){return cc.sT||settings_tolerance},hide_element_style:function(){return'{'+(cc.hES||hide_element_style)+'}'},hide_element:function(){return typeof cc.hE==='string'?cc.hE:hide_element},getVersion:function(){return version},finish:function(){if(!f){f=true;var e=d.getElementById('_vis_opt_path_hides');if(e)e.parentNode.removeChild(e)}},finished:function(){return f},load:function(e){var t=this.getSettings(),n=d.createElement('script'),i=this;if(t){n.textContent=t;d.getElementsByTagName('head')[0].appendChild(n);if(!w.VWO||VWO.caE){stT.removeItem(cK);i.load(e)}}else{n.fetchPriority='high';n.src=e;n.type='text/javascript';n.onerror=function(){_vwo_code.finish()};d.getElementsByTagName('head')[0].appendChild(n)}},getSettings:function(){try{var e=stT.getItem(cK);if(!e){return}e=JSON.parse(e);if(Date.now()>e.e){stT.removeItem(cK);return}return e.s}catch(e){return}},init:function(){if(d.URL.indexOf('__vwo_disable__')>-1)return;var e=this.settings_tolerance();w._vwo_settings_timer=setTimeout(function(){_vwo_code.finish();stT.removeItem(cK)},e);var t=d.currentScript,n=d.createElement('style'),i=this.hide_element(),r=t&&!t.async&&i?i+this.hide_element_style():'',c=d.getElementsByTagName('head')[0];n.setAttribute('id','_vis_opt_path_hides');v&&n.setAttribute('nonce',v.nonce);n.setAttribute('type','text/css');if(n.styleSheet)n.styleSheet.cssText=r;else n.appendChild(d.createTextNode(r));c.appendChild(n);this.load('https://dev.visualwebsiteoptimizer.com/j.php?a='+account_id+'&u='+encodeURIComponent(d.URL)+'&vn='+version)}};w._vwo_code=code;code.init();})();</script>
+<!-- End VWO Async SmartCode -->
+<link rel="dns-prefetch" href="//cdn.openwebinars.net"><link rel="dns-prefetch" href="//consent.cookiefirst.com"><script data-pagespeed-no-defer>(function(){function f(a,b,d){if(a.addEventListener)a.addEventListener(b,d,!1);else if(a.attachEvent)a.attachEvent("on"+b,d);else{var c=a["on"+b];a["on"+b]=function(){d.call(this);c&&c.call(this)}}};window.pagespeed=window.pagespeed||{};var g=window.pagespeed;function k(a){this.g=[];this.f=0;this.h=!1;this.j=a;this.i=null;this.l=0;this.b=!1;this.a=0}function l(a,b){var d=b.getAttribute("data-pagespeed-lazy-position");if(d)return parseInt(d,0);var d=b.offsetTop,c=b.offsetParent;c&&(d+=l(a,c));d=Math.max(d,0);b.setAttribute("data-pagespeed-lazy-position",d);return d}
+function m(a,b){var d,c,e;if(!a.b&&(0==b.offsetHeight||0==b.offsetWidth))return!1;a:if(b.currentStyle)c=b.currentStyle.position;else{if(document.defaultView&&document.defaultView.getComputedStyle&&(c=document.defaultView.getComputedStyle(b,null))){c=c.getPropertyValue("position");break a}c=b.style&&b.style.position?b.style.position:""}if("relative"==c)return!0;e=0;"number"==typeof window.pageYOffset?e=window.pageYOffset:document.body&&document.body.scrollTop?e=document.body.scrollTop:document.documentElement&&
+document.documentElement.scrollTop&&(e=document.documentElement.scrollTop);d=window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight;c=e;e+=d;var h=b.getBoundingClientRect();h?(e=h.top-d,c=h.bottom):(h=l(a,b),d=h+b.offsetHeight,e=h-e,c=d-c);return e<=a.f&&0<=c+a.f}
+k.prototype.m=function(a){p(a);var b=this;window.setTimeout(function(){var d=a.getAttribute("data-pagespeed-lazy-src");if(d)if((b.h||m(b,a))&&-1!=a.src.indexOf(b.j)){var c=a.parentNode,e=a.nextSibling;c&&c.removeChild(a);a.c&&(a.getAttribute=a.c);a.removeAttribute("onload");a.tagName&&"IMG"==a.tagName&&g.CriticalImages&&f(a,"load",function(){g.CriticalImages.checkImageForCriticality(this);b.b&&(b.a--,b.a||g.CriticalImages.checkCriticalImages())});a.removeAttribute("data-pagespeed-lazy-src");a.removeAttribute("data-pagespeed-lazy-replaced-functions");
+c&&c.insertBefore(a,e);if(c=a.getAttribute("data-pagespeed-lazy-srcset"))a.srcset=c,a.removeAttribute("data-pagespeed-lazy-srcset");a.src=d}else b.g.push(a)},0)};k.prototype.loadIfVisibleAndMaybeBeacon=k.prototype.m;k.prototype.s=function(){this.h=!0;q(this)};k.prototype.loadAllImages=k.prototype.s;function q(a){var b=a.g,d=b.length;a.g=[];for(var c=0;c<d;++c)a.m(b[c])}function t(a,b){return a.a?null!=a.a(b):null!=a.getAttribute(b)}
+k.prototype.u=function(){for(var a=document.getElementsByTagName("img"),b=0,d;d=a[b];b++)t(d,"data-pagespeed-lazy-src")&&p(d)};k.prototype.overrideAttributeFunctions=k.prototype.u;function p(a){t(a,"data-pagespeed-lazy-replaced-functions")||(a.c=a.getAttribute,a.getAttribute=function(a){"src"==a.toLowerCase()&&t(this,"data-pagespeed-lazy-src")&&(a="data-pagespeed-lazy-src");return this.c(a)},a.setAttribute("data-pagespeed-lazy-replaced-functions","1"))}
+g.o=function(a,b){function d(){if(!(c.b&&a||c.i)){var b=200;200<(new Date).getTime()-c.l&&(b=0);c.i=window.setTimeout(function(){c.l=(new Date).getTime();q(c);c.i=null},b)}}var c=new k(b);g.lazyLoadImages=c;f(window,"load",function(){c.b=!0;c.h=a;c.f=200;if(g.CriticalImages){for(var b=0,d=document.getElementsByTagName("img"),r=0,n;n=d[r];r++)-1!=n.src.indexOf(c.j)&&t(n,"data-pagespeed-lazy-src")&&b++;c.a=b;c.a||g.CriticalImages.checkCriticalImages()}q(c)});b.indexOf("data")&&((new Image).src=b);f(window,
+"scroll",d);f(window,"resize",d)};g.lazyLoadInit=g.o;})();
+
+pagespeed.lazyLoadInit(false, "https://www.gstatic.com/psa/static/1.gif");
+</script></head>
+<body class="">
+<script src="https://cdn.jsdelivr.net/npm/algoliasearch@4.20.0/dist/algoliasearch-lite.umd.js" integrity="sha256-DABVk+hYj0mdUzo+7ViJC6cwLahQIejFvC+my2M/wfM=" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/instantsearch.js@4.60.0/dist/instantsearch.production.min.js" integrity="sha256-9242vN47QUX50UG5Gf5XDO1YREWCEJRyXHofh5fsl24=" crossorigin="anonymous"></script>
+<style>.ais-Pagination-item:hover:not(:last-child):not(:first-child):not(.disabled) {background:#000;color:#fff}.ais-Pagination-item:not(:last-child):not(:first-child) {border:1px solid #d0d5dd}</style>
+<script>var ALGOLIA_INSIGHTS_SRC="https://cdn.jsdelivr.net/npm/search-insights@2.0.3";!function(e,a,t,n,s,i,c){e.AlgoliaAnalyticsObject=s,e[s]=e[s]||function(){(e[s].queue=e[s].queue||[]).push(arguments)},i=a.createElement(t),c=a.getElementsByTagName(t)[0],i.async=1,i.src=n,c.parentNode.insertBefore(i,c)}(window,document,"script",ALGOLIA_INSIGHTS_SRC,"aa");</script>
+<header class="header bg-dark-grey">
+<div class="container header-container">
+<a href="/">
+<figure class="brand">
+<script data-pagespeed-no-defer>(function(){for(var g="function"==typeof Object.defineProperties?Object.defineProperty:function(b,c,a){if(a.get||a.set)throw new TypeError("ES3 does not support getters and setters.");b!=Array.prototype&&b!=Object.prototype&&(b[c]=a.value)},h="undefined"!=typeof window&&window===this?this:"undefined"!=typeof global&&null!=global?global:this,k=["String","prototype","repeat"],l=0;l<k.length-1;l++){var m=k[l];m in h||(h[m]={});h=h[m]}var n=k[k.length-1],p=h[n],q=p?p:function(b){var c;if(null==this)throw new TypeError("The 'this' value for String.prototype.repeat must not be null or undefined");c=this+"";if(0>b||1342177279<b)throw new RangeError("Invalid count value");b|=0;for(var a="";b;)if(b&1&&(a+=c),b>>>=1)c+=c;return a};q!=p&&null!=q&&g(h,n,{configurable:!0,writable:!0,value:q});var t=this;function u(b,c){var a=b.split("."),d=t;a[0]in d||!d.execScript||d.execScript("var "+a[0]);for(var e;a.length&&(e=a.shift());)a.length||void 0===c?d[e]?d=d[e]:d=d[e]={}:d[e]=c};function v(b){var c=b.length;if(0<c){for(var a=Array(c),d=0;d<c;d++)a[d]=b[d];return a}return[]};function w(b){var c=window;if(c.addEventListener)c.addEventListener("load",b,!1);else if(c.attachEvent)c.attachEvent("onload",b);else{var a=c.onload;c.onload=function(){b.call(this);a&&a.call(this)}}};var x;function y(b,c,a,d,e){this.h=b;this.j=c;this.l=a;this.f=e;this.g={height:window.innerHeight||document.documentElement.clientHeight||document.body.clientHeight,width:window.innerWidth||document.documentElement.clientWidth||document.body.clientWidth};this.i=d;this.b={};this.a=[];this.c={}}function z(b,c){var a,d,e=c.getAttribute("data-pagespeed-url-hash");if(a=e&&!(e in b.c))if(0>=c.offsetWidth&&0>=c.offsetHeight)a=!1;else{d=c.getBoundingClientRect();var f=document.body;a=d.top+("pageYOffset"in window?window.pageYOffset:(document.documentElement||f.parentNode||f).scrollTop);d=d.left+("pageXOffset"in window?window.pageXOffset:(document.documentElement||f.parentNode||f).scrollLeft);f=a.toString()+","+d;b.b.hasOwnProperty(f)?a=!1:(b.b[f]=!0,a=a<=b.g.height&&d<=b.g.width)}a&&(b.a.push(e),b.c[e]=!0)}y.prototype.checkImageForCriticality=function(b){b.getBoundingClientRect&&z(this,b)};u("pagespeed.CriticalImages.checkImageForCriticality",function(b){x.checkImageForCriticality(b)});u("pagespeed.CriticalImages.checkCriticalImages",function(){A(x)});function A(b){b.b={};for(var c=["IMG","INPUT"],a=[],d=0;d<c.length;++d)a=a.concat(v(document.getElementsByTagName(c[d])));if(a.length&&a[0].getBoundingClientRect){for(d=0;c=a[d];++d)z(b,c);a="oh="+b.l;b.f&&(a+="&n="+b.f);if(c=!!b.a.length)for(a+="&ci="+encodeURIComponent(b.a[0]),d=1;d<b.a.length;++d){var e=","+encodeURIComponent(b.a[d]);131072>=a.length+e.length&&(a+=e)}b.i&&(e="&rd="+encodeURIComponent(JSON.stringify(B())),131072>=a.length+e.length&&(a+=e),c=!0);C=a;if(c){d=b.h;b=b.j;var f;if(window.XMLHttpRequest)f=new XMLHttpRequest;else if(window.ActiveXObject)try{f=new ActiveXObject("Msxml2.XMLHTTP")}catch(r){try{f=new ActiveXObject("Microsoft.XMLHTTP")}catch(D){}}f&&(f.open("POST",d+(-1==d.indexOf("?")?"?":"&")+"url="+encodeURIComponent(b)),f.setRequestHeader("Content-Type","application/x-www-form-urlencoded"),f.send(a))}}}function B(){var b={},c;c=document.getElementsByTagName("IMG");if(!c.length)return{};var a=c[0];if(!("naturalWidth"in a&&"naturalHeight"in a))return{};for(var d=0;a=c[d];++d){var e=a.getAttribute("data-pagespeed-url-hash");e&&(!(e in b)&&0<a.width&&0<a.height&&0<a.naturalWidth&&0<a.naturalHeight||e in b&&a.width>=b[e].o&&a.height>=b[e].m)&&(b[e]={rw:a.width,rh:a.height,ow:a.naturalWidth,oh:a.naturalHeight})}return b}var C="";u("pagespeed.CriticalImages.getBeaconData",function(){return C});u("pagespeed.CriticalImages.Run",function(b,c,a,d,e,f){var r=new y(b,c,a,e,f);x=r;d&&w(function(){window.setTimeout(function(){A(r)},0)})});})();pagespeed.CriticalImages.Run('/ngx_pagespeed_beacon','https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases/','tqzkNILCQC',false,false,'mamNmbIkRSw');</script><img class="logo" src="/static/public/images/logo.svg" alt="OpenWebinars" data-pagespeed-url-hash="1627502733" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</figure>
+</a>
+<button id="menu" class="btn btn-burger">
+<span class="icon-menu"></span>
+<span class="icon-x"></span>
+</button>
+<nav class="menu">
+<ul class="menu__list">
+<li class="menu__item has-submenu">
+<a href="/cursos/" data-item="cursos">
+Cursos
+<span class="icon-chevron-right"></span>
+</a>
+<a class="see-all" href="/cursos">Ver todos</a>
+<div class="submenu submenu--learning">
+<div class="submenu__categories">
+<div class="submenu__categories--header">
+<h5 class="submenu__categories--title">Cursos de Innovación Digital y Tecnología</h5>
+<p class="submenu__categories--content">Más de 1.600 formaciones para desarrollar tus habilidades profesionales.</p>
+<a class="submenu__categories--cta" href="/cursos">Ver todos los cursos <span class="icon-arrow-right ml-1rem"></span></a>
+</div>
+<div class="submenu__categories--body tab-active">
+<button class="submenu__categories--title submenu--title">
+Cursos por Categorías
+<span class="icon-chevron-down"></span>
+</button>
+<ul class="submenu__categories--row">
+<li class="submenu__item pr-0">
+<a href="/cursos/blockchain/">Blockchain</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/cloud/">Cloud</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/management/">Management</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/diseno-ux/">Diseño y UX</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/data-science/">Data Science</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/inteligencia-artificial/">Inteligencia Artificial</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/devops/">DevOps</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/productividad-habilidades/">Productividad &amp; habilidades</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/sistemas-redes/">Sistemas y Redes</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/desarrollo/">Desarrollo</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/cursos/ciberseguridad/">Ciberseguridad</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="submenu__cluster">
+<div class="submenu__cluster--header">
+<h5 class="submenu__cluster--title">Domina las herramientas más demandadas</h5>
+<p class="submenu__categories--content">Selecciona los cursos sobre las tecnologías que más te interesen.</p>
+</div>
+<div class="submenu__cluster--body">
+<button class="submenu__cluster--title submenu--title">
+Cursos por Tecnologías
+<span class="icon-chevron-down"></span>
+</button>
+<ul class="submenu__cluster--row">
+<li class="submenu__cluster--item pr-0">
+<a href="/temas/java/" class="cluster-icon" style="--cluster-primary-color: #EE6055;">
+<div class="figure">
+<img data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/academy/course/java-logo.svg" alt="Java" data-pagespeed-url-hash="2047768571" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<div>
+Java
+</div>
+</a>
+</li>
+<li class="submenu__cluster--item pr-0">
+<a href="/temas/azure/" class="cluster-icon" style="--cluster-primary-color: #0089D6;">
+<div class="figure">
+<img data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/academy/course/azure-microsoft.svg" alt="Azure" data-pagespeed-url-hash="1590366701" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<div>
+Azure
+</div>
+</a>
+</li>
+<li class="submenu__cluster--item pr-0">
+<a href="/temas/power-bi/" class="cluster-icon" style="--cluster-primary-color: #FFCD00;">
+<div class="figure">
+<img data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/academy/course/power-bi-logo.svg" alt="Power BI" data-pagespeed-url-hash="3984045230" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<div>
+Power BI
+</div>
+</a>
+</li>
+<li class="submenu__cluster--item pr-0">
+<a href="/temas/python/" class="cluster-icon" style="--cluster-primary-color: #5674BE;">
+<div class="figure">
+<img data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/academy/course/python-logo.svg" alt="Python" data-pagespeed-url-hash="2019419117" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</div>
+<div>
+Python
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</li>
+<li class="menu__item"><a href="/carreras/">Carreras<span class="icon-chevron-right"></span></a></li>
+<li class="menu__item has-submenu">
+<a data-item="productos">Soluciones<span class="icon-chevron-right"></span></a>
+<ul class="submenu">
+<li class="submenu__item pr-0">
+<a href="/productos/dashboard/">Dashboard de gestión y control de planes formativos</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/productos/lms-con-integracion-sso/">LMS con integración SSO</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/productos/agile-learning/">Agile Learning</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/productos/reportes/">Reportes</a>
+</li>
+</ul>
+</li>
+<li class="menu__item has-submenu">
+<button data-item="sectores">Sectores<span class="icon-chevron-right"></span></button>
+<ul class="submenu">
+<li class="submenu__item pr-0">
+<a href="/sectores/media-entertainment/">Media &amp; Entertainment</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/industria-ingenieria/">Industria e Ingeniería</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/empresas-de-servicios-tecnologicos/">Empresas de servicios tecnológicos</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/logistica-y-distribucion/">Logística y Distribución</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/organismos-publicos/">Organismos públicos</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/farmacia-salud-y-dispositivos-medicos/">Farmacia, salud y dispositivos médicos</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/tecnologicas-de-producto/">Tecnológicas de producto</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/servicios-financieros-y-legales/">Servicios financieros y legales</a>
+</li>
+<li class="submenu__item pr-0">
+<a href="/sectores/entidades-educativas/">Entidades educativas</a>
+</li>
+</ul>
+</li>
+<li class="menu__item"><a href="/precios/">Precios<span class="icon-chevron-right"></span></a></li>
+<li class="menu__item"><a href="/blog/">Blog<span class="icon-chevron-right"></span></a></li>
+</ul>
+<div class="cta-buttons">
+<div id="search" class="search-field">
+<div class="search-field__input">
+<div class="input-wrapp">
+<input placeholder="Introduce tu búsqueda" name="s" type="text" class="pl-1rem">
+</div>
+</div>
+<button class="search-field__button">
+<span class="icon-search"></span>
+</button>
+</div>
+<a href="/accounts/login/" class="btn btn-lg btn-outline-light mr-4">Iniciar sesión</a>
+<a href="/contacto/" class="btn btn-lg btn-primary">Contacta</a>
+</div>
+</nav>
+</div>
+</header>
+<main class="main">
+<div class="main-screen">
+<section class="header-post">
+<div class="container">
+<div class="sheader-post__container">
+<nav aria-label="breadcrumb" class="ml-1rem pt-1rem">
+<ol class="breadcrumb">
+<li class="breadcrumb-item"><a href="/">Inicio</a></li>
+<li class="breadcrumb-item"><a href="/blog/">Blog</a></li>
+<li class="breadcrumb-item"><a href="/blog/tecnologia/">Tecnología</a></li>
+<li class="breadcrumb-item"><a href="/blog/lenguaje-programacion/">Lenguajes de Programación</a></li>
+</ol>
+</nav>
+<div class="flex flex-col flex-row-reverse-md">
+<div class="header-post__container__image col-12 col-lg-6" style="background-image: url(https://cdn.openwebinars.net/media/featured_images/poo-java-objetos.webp)"></div>
+<div class="header-post__container__content mr-md-3rem pb-5rem">
+<div class="row mt-1rem">
+<span class="text-2xs text-white uppercase">Lenguajes de Programación</span>
+</div>
+<h1 class="header-post__container__content__title mb-0">Introducción a POO en Java: Objetos y clases</h1>
+<div class="text-white mb-1rem text-sm py-4">Comenzamos con este primer artículo sobre Programación Orientada a Objetos en Java, en el que profundizaremos en algo fundamental: las clases y los objetos. Esta introducción te permitirá comenzar a conocer las herramientas necesarias para construir programas más estructurados y fáciles de mantener.</div>
+<div class="flex flex-wrap mb-2rem">
+<div class="bg-grey-800 text-grey-400 text-xs px-4 py-2 mr-5 capitalize white-space-nowrap mb-4">
+<a href="/blog/lenguaje-programacion/">Lenguajes de Programación</a>
+</div>
+<!-- TODO: Pendiente de saber como montar el enlace -->
+<div class="bg-grey-800 text-grey-400 text-xs px-4 py-2 mr-5 capitalize white-space-nowrap mb-4">
+<a href="/blog/java/">Java</a>
+</div>
+<!-- TODO: Pendiente de saber como montar el enlace -->
+</div>
+<div class="flex justify-between w-full">
+<div class="header-post__meta">
+<figure class="avatar mr-1rem bg-white">
+<img src="/avatar/4o8DQOQo/40/" alt="Jorge López Blasco" data-pagespeed-url-hash="2755524343" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</figure>
+<div>
+<div class="header-post__meta text-sm text-white mb-2">
+<a href="/autor/jorge-lopez-blasco/">Jorge López Blasco</a>
+</div>
+<div>Experto en Cloud Computing, Machine Learning y Big Data.</div>
+</div>
+</div>
+<div class="header-post__meta italic d-none d-md-flex">
+Lectura: 6 minutos
+</div>
+</div>
+<hr class="border-0 border-b-1 border-grey-400 w-full mt-1rem">
+<div class="row justify-between w-full text-grey-500 text-xs italic">
+<div class="col-6">
+Publicado el 27 de Octubre de 2023
+</div>
+<div class="col-6 text-right">
+<div class="header-post__meta italic justify-end mb-2 d-md-none">
+Lectura: 6 minutos
+</div>
+<div>
+Compartir
+<button class="text-grey-500">
+<span onclick="window.open('https://www.linkedin.com/shareArticle/?title=Introducción a POO en Java: Objetos y clases&url=https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases','_blank','width=600,height=400, top=200,left=400')" class="icon-linkedin ml-2"></span>
+</button>
+<button class="text-grey-500">
+<span onclick="window.open('https://twitter.com/intent/tweet?text=Introducción a POO en Java: Objetos y clases&url=https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases','_blank','width=600,height=400, top=200,left=400')" class="icon-twitter ml-2"></span>
+</button>
+<button class="text-grey-500">
+<span onclick="window.open('https://www.facebook.com/sharer.php?t=Introducción a POO en Java: Objetos y clases&u=https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases','_blank','width=600,height=400, top=200,left=400')" class="icon-facebook ml-2"></span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="body-post bg-white">
+<div class="container col-lg-6">
+<div class="flex flex-col items-center flex-row-lg">
+<div>
+<div class="sumary bg-grey-100 p-10 mt-2rem mb-2rem">
+<div class="font-bold mb-1rem">Tabla de contenidos</div>
+<ul class="no-list">
+<li><a href="#introducción">Introducción</a></li>
+<li><a href="#qué-es-la-programación-orientada-a-objetos">Qué es la Programación Orientada a Objetos</a></li>
+<li><a href="#qué-son-las-clases-en-java">Qué son las clases en Java</a></li>
+<li><a href="#qué-son-los-objetos-en-java">Qué son los objetos en Java</a></li>
+<li><a href="#ventajas-y-desventajas-de-la-poo">Ventajas y desventajas de la POO</a></li>
+<li><a href="#conclusiones">Conclusiones</a></li>
+</ul>
+</div>
+</div>
+<div>
+<p>¿Alguna vez te has preguntado cómo los programas de software gestionan y organizan la información? ¿Qué sucede internamente cuando interactúas con una aplicación en tu dispositivo? La respuesta se encuentra en la Programación Orientada a Objetos, un enfoque fundamental en el mundo de la programación.</p>
+<p>Nuestro objetivo con este artículo y los sucesivos, es explorar a fondo este concepto centrándonos en Java, un lenguaje de programación ampliamente utilizado.</p>
+<h2 id="introducción">Introducción</h2>
+<p>En el complejo mundo de la programación, una de las metodologías más influyentes es la Programación Orientada a Objetos (POO). Esta metodología se ha convertido en un pilar fundamental para el desarrollo de software de alta calidad y eficiencia. Comenzaremos por comprender qué es la POO y por qué es tan importante en el desarrollo de software moderno. Luego, nos adentraremos en el mundo de los objetos en Java, examinando sus conceptos fundamentales y explorando ejemplos prácticos que te ayudarán a entender cómo funcionan.</p>
+<p>Posteriormente, nos sumergiremos en las clases en Java, que son los moldes para la creación de objetos. Analizaremos los conceptos esenciales relacionados con las clases y proporcionaremos ejemplos prácticos que te mostrarán cómo definir y utilizar clases en tus programas. La POO se basa en el concepto de “objetos”, que son las piezas fundamentales que permiten modelar el mundo real dentro de un programa.</p>
+<p>¡Acompáñanos en este artículo y descubre cómo esta metodología revoluciona la forma en la que creamos software!</p>
+<ul>
+</ul>
+</div>
+</div>
+<hr class="my-2rem d-none d-md-flex">
+<div id="post-content">
+<div class="bg-post bg-post__left"></div>
+<h2 id="qué-es-la-programación-orientada-a-objetos">Qué es la Programación Orientada a Objetos</h2>
+<p>La Programación Orientada a Objetos (POO) es un enfoque de programación que se basa en la creación y manipulación de “objetos”. Estos objetos son entidades que combinan datos y comportamientos en un solo paquete.</p>
+<p>En la POO, los objetos tienen atributos que representan sus características o propiedades, y métodos que definen las acciones que pueden realizar. Las clases se utilizan para definir la estructura y el comportamiento de los objetos. Una clase actúa como una plantilla o un modelo a partir del cual se crean objetos individuales con características únicas.</p>
+<p>Por ejemplo, considera una aplicación que gestiona vehículos. Podríamos definir una clase “Coche” que tenga atributos como “marca”, “modelo” y “color”, y métodos como “arrancar” y “parar”. Luego, podemos crear múltiples objetos de la clase “Coche”, cada uno con sus propias características y la capacidad de realizar las mismas acciones.</p>
+<p>La POO organiza el código de manera modular al combinar datos y comportamientos en objetos, lo que facilita la creación, mantenimiento y reutilización de código en el desarrollo de software. Muchos lenguajes de programación populares son orientados a objetos, como es el caso de Java, C++, Python y C#. A través de este enfoque, los programadores pueden diseñar y construir sistemas de software más organizados, modulares y fáciles de mantener. Pero, ¿qué son realmente las clases en Java y cómo funcionan? Esta pregunta es nuestro punto de partida.</p>
+<p>
+<div class="block-cta ">
+<div class="block-cta__bg">
+<div class="frame-top"></div>
+<div class="frame-bottom"></div>
+</div>
+<div class="block-cta__row w-full flex-lg">
+<div class="block-cta__image" style="background-image: url( https://cdn.openwebinars.net/media/publications/banner/backend2.jpg); background-size: cover; background-position:center">
+</div>
+<div class="block-cta__action">
+<div class="title-cta">
+Conviértete en un Backend Developer
+</div>
+<div class="content-cta">Domina los lenguajes de programación más demandados. Accede a cursos, talleres y laboratorios para crear proyectos con Java, Python, PHP, Microsoft .NET y más</div>
+<a class="btn btn-primary btn-cta mt-lg-1rem" target="_blank" href="https://openwebinars.net/registro/prueba-gratis/?ref=blog">Comenzar gratis ahora</a>
+</div>
+</div>
+</div></p>
+<h2 id="qué-son-las-clases-en-java">Qué son las clases en Java</h2>
+<p>En Java, las clases son una parte fundamental de la POO y son la base para la creación de objetos, que son instancias de esas clases. Una clase en Java es un plano o un modelo que define la estructura y el comportamiento de los objetos que se pueden crear a partir de ella.</p>
+<p>Imagina que estás desarrollando un videojuego de carreras de coches. En este juego, tienes diferentes tipos de coches, como deportivos, todoterrenos y coches de rally. Cada coche tiene ciertas características y habilidades únicas. En Java, puedes utilizar clases para representar estos coches.</p>
+<p>Una clase en Java sería como el plano para crear un coche en tu juego. La clase define qué características tiene el coche (como su modelo, velocidad máxima, potencia del motor, etc.) y qué puede hacer (como acelerar, frenar, girar, etc.).</p>
+<h3 id="conceptos-fundamentales-de-las-clases">Conceptos fundamentales de las clases</h3>
+<p>A continuación, te presentamos algunos de los conceptos fundamentales de las clases en Java:</p>
+<ul>
+<li><strong>Atributos</strong>: Las clases pueden tener atributos, también conocidos como variables de instancia, que representan las características o propiedades del objeto. En el ejemplo del coche los atributos serian el modelo, la velocidad máxima, etc.</li>
+<li><strong>Métodos</strong>: Las clases contienen métodos que representan el comportamiento del objeto. Los métodos son funciones que pueden realizar acciones y manipular los atributos de la clase. En nuestro caso sería acelerar frenar, girar, etc.</li>
+<li><strong>Constructores</strong>: Las clases pueden tener constructores, que son métodos especiales utilizados para inicializar objetos cuando se crean. Los constructores tienen el mismo nombre que la clase y pueden tener diferentes parámetros para configurar el estado inicial del objeto.</li>
+<li><strong>Encapsulación</strong>: La encapsulación es un principio de la POO que se refiere a la ocultación de los detalles de implementación de una clase y la exposición controlada de sus atributos y métodos. En Java, puedes utilizar modificadores de acceso como private, protected, public, etc., para controlar el acceso a los miembros de una clase.</li>
+<li><strong>Herencia</strong>: Las clases pueden heredar atributos y métodos de otras clases. La herencia permite la creación de jerarquías de clases, donde una clase (subclase o clase derivada) puede extender o heredar características de otra clase (superclase o clase base).</li>
+<li><strong>Instanciación</strong>: Para utilizar una clase, primero debes crear una instancia u objeto de esa clase. Puedes hacerlo utilizando el operador new, seguido del nombre de la clase y los argumentos necesarios para el constructor si lo tiene.</li>
+</ul>
+<h3 id="ejemplos-prácticos-con-clases">Ejemplos prácticos con clases</h3>
+<p>El siguiente es un ejemplo de una clase sencilla en Java:</p>
+<pre>
+<code class="java">public class Persona {
+    // Atributos
+    private String nombre;
+    private int edad;
+
+    // Constructor
+    public Persona(String nombre, int edad) {
+        this.nombre = nombre;
+        this.edad = edad;
+    }
+
+    // Método
+    public void saludar() {
+        System.out.println("Hola, soy " + nombre + " y tengo " + edad + " años.");
+    }
+}
+</code></pre>
+<p>En este ejemplo, la clase Persona tiene atributos (nombre y edad), un constructor para inicializar los atributos y un método saludar que muestra un mensaje por pantalla. Puedes crear objetos Persona a partir de esta clase utilizando el constructor y luego llamar al método saludar en esos objetos.</p>
+<p>Vamos a ver un ejemplo algo más complejo, en esta ocasión crearemos la clase que comentábamos en el ejemplo del videojuego de coches:</p>
+<pre>
+<code class="java">public class Coche {
+    // Atributos
+    private String modelo;
+    private int velocidadMaxima;
+    private int potenciaMotor;
+    private boolean enMarcha;
+
+    // Constructor
+    public Coche(String modelo, int velocidadMaxima, int potenciaMotor) {
+        this.modelo = modelo;
+        this.velocidadMaxima = velocidadMaxima;
+        this.potenciaMotor = potenciaMotor;
+        this.enMarcha = false; // El coche comienza apagado
+    }
+
+    // Métodos
+    public void acelerar() {
+        if (enMarcha) {
+            System.out.println("El coche " + modelo + " está acelerando.");
+        } else {
+            System.out.println("Primero enciende el coche.");
+        }
+    }
+
+    public void frenar() {
+        if (enMarcha) {
+            System.out.println("El coche " + modelo + " está frenando.");
+        } else {
+            System.out.println("El coche está apagado, no se puede frenar.");
+        }
+    }
+
+    public void encender() {
+        enMarcha = true;
+        System.out.println("El coche " + modelo + " se ha encendido.");
+    }
+
+    public void apagar() {
+        enMarcha = false;
+        System.out.println("El coche " + modelo + " se ha apagado.");
+    }
+}
+</code></pre>
+<p>La clase Coche que se muestra en el código es una representación simplificada de un coche en Java. modelo, velocidadMaxima, potenciaMotor son los atributos o propiedades del coche.</p>
+<p>El constructor es un método especial que se llama al crear un objeto de la clase. En este caso, el constructor public Coche(String modelo, int velocidadMaxima, int potenciaMotor) toma tres parámetros (modelo, velocidad máxima y potencia del motor) para inicializar los atributos del coche cuando se crea una instancia de la clase Coche.</p>
+<p>También tenemos los métodos acelerar, frenar, encender, apagar encargados de mostrar las diferentes acciones que puede realizar una instancia de esta clase. Los objetos creados a partir de esta clase representarán coches individuales con sus propias propiedades y estados.</p>
+<p>Por último, crearemos una clase con varios constructores y métodos más avanzados, la más compleja de las que veremos en este artículo:</p>
+<pre>
+<code class="java">public class Coche {
+    // Atributos
+    /**
+     * Marca del coche
+     */
+    private String marca;
+    /**
+     * Modelo del coche
+     */
+    private String modelo;
+    /**
+     * Año de fabricación del coche
+     */
+    private int añoFabricacion;
+    /**
+     * Precio del coche
+     */
+    private double precio;
+
+    // Métodos
+    /**
+     * Aplica un descuento al precio del coche si es un modelo antiguo
+     * @param descuento
+     *
+     */
+    public boolean aplicarDescuento(double descuento){
+        boolean descuentoAplicado = false;
+        if (añoFabricacion &lt; 2010){
+            precio -= descuento;
+            descuentoAplicado = true;
+        }
+        return descuentoAplicado;
+    }
+
+    // Constructores
+    /**
+     * Constructor por defecto
+     */
+    public Coche(){
+        this.marca = "";
+        this.modelo = "";
+        this.añoFabricacion = 0;
+        this.precio = 0.0;
+    }
+
+    /**
+     * Constructor con 4 parámetros
+     * @param marca Marca del coche
+     * @param modelo Modelo del coche
+     * @param añoFabricacion Año de fabricación del coche
+     * @param precio Precio del coche
+     */
+    public Coche(String marca, String modelo, int añoFabricacion, double precio){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.añoFabricacion = añoFabricacion;
+        this.precio = precio;
+    }
+}
+</code></pre>
+<p>En este ejemplo, hemos creado una clase llamada “Coche” que representa información sobre diferentes coches. Cada coche tiene atributos como “marca”, “modelo”, “añoFabricacion” y “precio”.</p>
+<p>También hemos definido un método llamado “aplicarDescuento” que aplica un descuento al precio del coche si es un modelo antiguo (fabricado antes de 2010).</p>
+<p>Por último, hemos agregado dos constructores, uno por defecto que inicializa todos los atributos a valores predeterminados y otro constructor que permite establecer los valores de los atributos al crear un nuevo objeto Coche.</p>
+<p>Así es como las clases en Java permiten crear objetos con sus propias características y comportamientos, lo que facilita la creación de programas más organizados y orientados a objetos.</p>
+<h2 id="qué-son-los-objetos-en-java">Qué son los objetos en Java</h2>
+<p>En lo que llevamos de articulo hemos mencionado en varias ocasiones las palabras objeto o instancia, pero, ¿qué es exactamente un objeto en Java?</p>
+<p>En Java, un objeto es una instancia específica de una clase que encapsula datos y comportamientos relacionados. Los objetos se crean a partir de clases, que como hemos comentado definen la estructura y el comportamiento de dichos objetos. Cada objeto tiene atributos que almacenan datos y métodos que definen las operaciones que puede realizar.</p>
+<p>En el contexto del videojuego de carreras de coches, los objetos son las representaciones concretas de los coches que existen en el juego. Cada objeto coche corresponde a un tipo específico de coche, como un deportivo, un todoterreno o un coche de rally.</p>
+<h3 id="conceptos-fundamentales-de-los-objetos">Conceptos fundamentales de los objetos</h3>
+<p>Los objetos tienen atributos y métodos accesibles, para acceder a los métodos y atributos de un objeto, utilizamos el nombre del objeto seguido de un punto (.) y el nombre del método o atributo.</p>
+<pre>
+<code class="java">MiClase miObjeto = new MiClase(); // Crear un objeto
+miObjeto.miMetodo(); // Acceder a un método
+int valor = miObjeto.miAtributo; // Acceder a un atributo
+</code></pre>
+<p>Los atributos son variables que almacenan datos en una clase u objeto. Pueden ser públicos, privados o protegidos, y se pueden acceder utilizando métodos públicos conocidos como getters y setters. Para acceder a un atributo, puedes utilizar estos métodos o, si el atributo es público, acceder directamente al atributo.</p>
+<pre>
+<code class="java">// Acceso a un atributo privado a través de métodos getters y setters
+public void setNombre(String nombre) {
+    this.nombre = nombre;
+}
+public String getNombre() {
+    return nombre;
+}
+
+// Acceso a un atributo público
+public int edad;
+</code></pre>
+<p>Se pueden acceder a los métodos llamándolos directamente en un objeto o utilizando una referencia al objeto seguida de un punto y el nombre del método.</p>
+<pre>
+<code class="java">// Llamar a un método
+miObjeto.miMetodo();
+</code></pre>
+<h3 id="ejemplos-prácticos-con-objetos">Ejemplos prácticos con objetos</h3>
+<p>Veamos ahora un par de ejemplos. Vamos a comenzar suponiendo que queremos crear objetos coche para poder utilizarlos en nuestro juego, para ello nos basaremos en la segunda clase mostrada en los ejemplos anteriores:</p>
+<pre>
+<code class="java">public class JuegoDeCarreras {
+    public static void main(String[] args) {
+        // Crear objetos coche
+        Coche cocheDeportivo = new Coche("Deportivo A", 250, 400);
+        Coche cocheTodoTerreno = new Coche("Todoterreno B", 180, 350);
+
+        // Encender los coches
+        cocheDeportivo.encender();
+        cocheTodoTerreno.encender();
+
+        // Acelerar y frenar los coches
+        cocheDeportivo.acelerar();
+        cocheTodoTerreno.acelerar();
+
+        cocheDeportivo.frenar();
+        cocheTodoTerreno.frenar();
+
+        // Apagar los coches
+        cocheDeportivo.apagar();
+        cocheTodoTerreno.apagar();
+    }
+}
+</code></pre>
+<p>En este ejemplo, hemos creado dos objetos coche: cocheDeportivo y cocheTodoTerreno. Cada uno de ellos tiene sus propias características y métodos. Al interactuar con estos objetos, podemos encenderlos, acelerarlos, frenarlos y apagarlos.</p>
+<p>A continuacioó, vamos a mostrar cómo podríamos trabajar con la última de las clases mostrada en los ejemplos anteriores:</p>
+<pre>
+<code class="java">public class EjemploCoche {
+    public static void main(String[] args) {
+        // Crear un objeto de la clase Coche usando el constructor con parámetros
+        Coche miCoche = new Coche("Toyota", "Camry", 2015, 15000.0);
+
+        // Comentando el objeto creado
+        System.out.println("Información de mi coche:");
+        System.out.println("Marca: " + miCoche.getMarca());
+        System.out.println("Modelo: " + miCoche.getModelo());
+        System.out.println("Año de Fabricación: " + miCoche.getAñoFabricacion());
+        System.out.println("Precio: $" + miCoche.getPrecio());
+
+        // Aplicar un descuento si es un modelo antiguo
+        double descuento = 2000.0;
+        boolean descuentoAplicado = miCoche.aplicarDescuento(descuento);
+
+        // Comentando si se aplicó el descuento
+        if (descuentoAplicado) {
+            System.out.println("Se aplicó un descuento de $" + descuento);
+            System.out.println("Nuevo precio: $" + miCoche.getPrecio());
+        } else {
+            System.out.println("No se aplicó ningún descuento.");
+        }
+    }
+}
+</code></pre>
+<p>En este ejemplo, hemos creado un objeto miCoche de la clase Coche utilizando el constructor con parámetros. Luego, hemos comentado la información del coche, incluyendo la marca, el modelo, el año de fabricación y el precio. Después, hemos intentado aplicar un descuento al precio del coche si es un modelo antiguo y hemos comentado si se aplicó o no el descuento.</p>
+<p>
+<div class="block-cta block-cta--reverse">
+<div class="block-cta__bg">
+<div class="frame-top"></div>
+<div class="frame-bottom"></div>
+</div>
+<div class="block-cta__row w-full flex-lg">
+<div class="block-cta__image" style="background-image: url( https://cdn.openwebinars.net/media/publications/banner/backend4.jpg); background-size: cover; background-position:center">
+</div>
+<div class="block-cta__action">
+<div class="title-cta">
+Mejora las habilidades de tus desarrolladores
+</div>
+<div class="content-cta">Acelera la formación tecnológica de tus equipos con OpenWebinars. Desarrolla tu estrategia de atracción, fidelización y crecimiento de tus profesionales con el menor esfuerzo.</div>
+<a class="btn btn-primary btn-cta mt-lg-1rem" target="_blank" href="https://library.openwebinars.net/solicitar-demostracion-gratuita/?ref=blog">Solicitar más información</a>
+</div>
+</div>
+</div></p>
+<h2 id="ventajas-y-desventajas-de-la-poo">Ventajas y desventajas de la POO</h2>
+<p>La POO es un paradigma de programación ampliamente elogiado, pero como cualquier enfoque, tiene sus luces y sombras. Vamos a examinar las ventajas y desventajas de la POO para obtener una visión más balanceada de esta metodología.</p>
+<ul>
+<li>
+<p><strong>Ventajas</strong>:</p>
+<ul>
+<li>La principal ventaja de la POO radica en la reutilización de código. Esto significa que puedes aprovechar y modificar clases y objetos existentes en lugar de crear todo desde cero. Esto ahorra tiempo y esfuerzo, además de reducir la posibilidad de errores.</li>
+<li>Por otro lado, permite agregar nuevas funcionalidades y mejorar el rendimiento de un programa de manera eficiente. Puedes modificar o extender clases existentes sin afectar negativamente el código ya implementado, lo que facilita las actualizaciones y la adaptación a nuevas necesidades.</li>
+<li>Promueve la división de un programa en módulos más pequeños y manejables. Esto facilita el desarrollo, la depuración y el mantenimiento del código, ya que cada componente se puede abordar de manera independiente.</li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas</strong>:</p>
+<ul>
+<li>La POO puede resultar en un tiempo de ejecución más lento en comparación con otros enfoques de programación, debido a la creación y manipulación de objetos adicionales. Paradigmas como la programación funcional pueden ser más eficientes en este sentido.</li>
+<li>Los objetos requieren más memoria para almacenar datos y métodos, lo que puede afectar el rendimiento en programas de mediana o gran complejidad. Este mayor consumo de memoria es una consideración importante en sistemas con recursos limitados.</li>
+<li>Al principio puede resultar compleja, especialmente para programadores novatos. La necesidad de comprender conceptos como herencia, polimorfismo y encapsulación puede aumentar el tiempo de aprendizaje y desarrollo. Sin embargo, con recursos adecuados de aprendizaje, esta barrera se puede superar.</li>
+</ul>
+</li>
+</ul>
+<h2 id="conclusiones">Conclusiones</h2>
+<p>En conclusión, en este artículo hemos explorado los conceptos fundamentales de la Programación Orientada a Objetos (POO) en Java, un paradigma de programación esencial en el desarrollo de software moderno.</p>
+<p>La POO se basa en la creación y manipulación de objetos, que combinan datos (atributos) y comportamientos (métodos) en una sola entidad. Las clases actúan como plantillas para crear objetos, definiendo su estructura y comportamiento. En este artículo hemos explorado conceptos clave de estas, como atributos, métodos, constructores, encapsulación, herencia y instanciación. Además, hemos visto cómo podemos crear objetos y acceder a sus métodos y atributos de forma sencilla, todo esto acompañado con ejemplos prácticos.</p>
+<p>Por último, hemos examinado las ventajas y desventajas de la POO, destacando su reutilización de código y modularidad como ventajas, pero también señalando posibles desventajas en términos de consumo de memoria y complejidad inicial.</p>
+<p>Si te ha gustado el artículo, te recordamos que esta introducción práctica a Java comenzó con otros artículos previos, que te recomendamos visitar para tener una mejor comprensión de las bases de este lenguaje: <a href="https://openwebinars.net/blog/que-es-java/" target="_blank">Introducción y primeros pasos con Java</a>, <a href="https://openwebinars.net/blog/introduccion-a-java-datos-y-variables/" target="_blank">Datos y variables en Java</a>, <a href="https://openwebinars.net/blog/introduccion-a-java-estructuras-de-datos/" target="_blank">Estructuras de datos en Java</a>, <a href="https://openwebinars.net/blog/introduccion-a-java-operadores/" target="_blank">Operadores en Java</a>, <a href="https://openwebinars.net/blog/introduccion-a-java-sentencias/" target="_blank">Sentencias en Java</a> y <a href="https://openwebinars.net/blog/introduccion-a-java-metodos-parametros-y-argumentos/" target="_blank">Métodos, parámetros y argumentos en Java</a>.</p>
+<ul>
+</ul>
+</div>
+<div class="mt-3rem">
+<div class="bg-post bg-post__full"></div>
+<div class="bg-grey-100 p-2rem relative">
+<figure>
+<img data-pagespeed-lazy-src="/static/public/images/icons/icon-lightbulb.svg" alt="Icono de una bombilla" aria-hidden="true" data-pagespeed-url-hash="1118296666" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</figure>
+<div>
+<h2 id="lo-que-deberías-recordar-de-los-objetos-y-clases-en-java">Lo que deberías recordar de los objetos y clases en Java</h2>
+<ul>
+<li>La Programación Orientada a Objetos (POO) es un enfoque fundamental en la programación que se basa en la creación y manipulación de objetos, que combinan datos y comportamientos.</li>
+<li>En la POO, las clases definen la estructura y el comportamiento de los objetos. Cada objeto es una instancia de una clase.</li>
+<li>Los objetos tienen atributos que representan sus características y métodos que definen sus acciones.</li>
+<li>En Java, las clases son la base para la creación de objetos y actúan como plantillas.</li>
+<li>Algunos conceptos fundamentales de las clases en Java incluyen atributos, métodos, constructores, encapsulación, herencia y instanciación.</li>
+<li>Los atributos representan las propiedades de un objeto y se pueden acceder a través de métodos getters y setters.</li>
+<li>Los métodos son funciones que realizan acciones y manipulan los atributos de la clase.</li>
+<li>La encapsulación es un principio de la POO que controla el acceso a los atributos y métodos de una clase.</li>
+<li>La herencia permite que una clase herede atributos y métodos de otra, lo que facilita la creación de jerarquías de clases.</li>
+<li>Los objetos se crean a partir de clases en Java y encapsulan datos y comportamientos relacionados, lo que facilita la modularidad y la reutilización de código.</li>
+</ul>
+</div>
+</div>
+</div>
+<hr class="mt-4rem mb-2rem">
+<div class="flex justify-between">
+<small><i>Compartir este post</i></small>
+<div>
+<button onclick="copyText(event, 'https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases')" class="text-grey-500 copy-clipboard">
+<small class="feedback">Copiado</small>
+<span class="clipboard-icon icon-link ml-2"></span>
+</button>
+<button class="text-grey-500">
+<span onclick="window.open('https://www.linkedin.com/shareArticle/?title=Introducción a POO en Java: Objetos y clases&url=https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases','_blank','width=600,height=400, top=200,left=400')" class="icon-linkedin ml-2"></span>
+</button>
+<button class="text-grey-500">
+<span onclick="window.open('https://twitter.com/intent/tweet?text=Introducción a POO en Java: Objetos y clases&url=https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases','_blank','width=600,height=400, top=200,left=400')" class="icon-twitter ml-2"></span>
+</button>
+<button class="text-grey-500">
+<span onclick="window.open('https://www.facebook.com/sharer.php?t=Introducción a POO en Java: Objetos y clases&u=https://openwebinars.net/blog/introduccion-a-poo-en-java-objetos-y-clases','_blank','width=600,height=400, top=200,left=400')" class="icon-facebook ml-2"></span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<div class="bg-grey-100 pt-3rem">
+<section class="container footer-post">
+<p class="h3 font-bold">También te puede interesar...</p>
+<div class="footer-post__cards">
+<div class="col-lg-4 col-3-gap">
+<div class="card-training relative">
+<figure class="training-icon Curso">
+<img class="w-full" data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/academy/course/java-logo.svg" alt="Java desde 0: Orientación a Objetos" data-pagespeed-url-hash="2047768571" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</figure>
+<div class="card-training__content flex-auto">
+<h3 class="card-training__title"><a class="extended" href="/cursos/java-desde-0-orientacion-objetos/">Java desde 0: Orientación a Objetos</a></h3>
+<div class="card-training__meta meta">
+<span class="icon-clock mr-2"></span> 6 horas y 41 minutos · <span class="ml-2 capitalize"> Curso</span>
+</div>
+<p class="card-training__description">
+En esta formación veremos como crear una aplicación Java utilizando el paradigma de Orientación a Objetos, conociendo las diferentes funcionalidades que ofrece el lenguaje y …
+</p>
+<ul class="card-training__tags">
+<li>
+<div class="tag">Lenguajes de programación</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-3-gap">
+<div class="card-training relative">
+<figure class="training-icon Curso">
+<img class="w-full" data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/academy/course/java-logo.svg" alt="Java desde 0: Introducción" data-pagespeed-url-hash="2047768571" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</figure>
+<div class="card-training__content flex-auto">
+<h3 class="card-training__title"><a class="extended" href="/cursos/java/">Java desde 0: Introducción</a></h3>
+<div class="card-training__meta meta">
+<span class="icon-clock mr-2"></span> 6 horas y 13 minutos · <span class="ml-2 capitalize"> Curso</span>
+</div>
+<p class="card-training__description">
+Con esta formación aprenderás a crear una aplicación Java desde cero, conociendo los fundamentos más importantes del lenguaje de programación y aplicándolos para resolver ejercicios …
+</p>
+<ul class="card-training__tags">
+<li>
+<div class="tag">Lenguajes de programación</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-3-gap">
+<div class="card-blog">
+<figure class="card-blog__image">
+<img data-pagespeed-lazy-src="https://cdn.openwebinars.net/media/featured_images/Frameworks-java.webp" data-pagespeed-url-hash="4180572526" src="https://www.gstatic.com/psa/static/1.gif" onload="pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);" onerror="this.onerror=null;pagespeed.lazyLoadImages.loadIfVisibleAndMaybeBeacon(this);">
+</figure>
+<div class="card-blog__description">
+<span class="category">Tecnología</span>
+<h2 class="text-lg"><a class="extended" href="/blog/frameworks-java-para-un-desarrollo-eficiente/">Frameworks Java para un desarrollo eficiente</a></h2>
+<span class="date-published">01 Noviembre 2023</span>
+<span class="name-author">Pablo Huet</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<div class="secondary-screen d-none">
+<section class="border-bottom pb-3rem mb-2rem">
+<div class="container">
+<div class="ml-1rem flex items-center justify-between">
+<div class="flex items-center">
+<h5 class="h5">Cursos</h5>
+<div class="mt-2 ml-10" id="stats-searched"></div>
+</div>
+<a href="/cursos/">
+<span class="icon-plus"></span>
+Ver todos
+</a>
+</div>
+<div id="hits-searched"></div>
+</div>
+</section>
+<section class="container border-bottom mb-2rem">
+<div class="ml-1rem flex items-center justify-between">
+<div class="flex items-center">
+<h5 class="h5">Artículos</h5>
+<div class="mt-2 ml-10" id="stats-searched-blog"></div>
+</div>
+<a id="url-blog" href="/blog/search">
+<span class="icon-plus"></span>
+Ver todos
+</a>
+</div>
+<div id="hits-searched-blog"></div>
+</section>
+</div>
+</main>
+<footer class="footer bg-dark-grey">
+<div class="container footer-container">
+<figure class="brand">
+<img class="logo" src="/static/public/images/logo.svg" alt="OpenWebinars" data-pagespeed-url-hash="1627502733" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+</figure>
+<div class="group-menu-footer">
+<nav class="menu-footer">
+<ul class="menu-footer-list">
+<li class="menu-footer-item menu-footer-title-list mb-4">Soluciones</li>
+<li class="menu-footer-item"><a href="/sectores/media-entertainment/">Media &amp; Entertainment</a></li>
+<li class="menu-footer-item"><a href="/sectores/industria-ingenieria/">Industria e Ingeniería</a></li>
+<li class="menu-footer-item"><a href="/sectores/empresas-de-servicios-tecnologicos/">Empresas de servicios tecnológicos</a></li>
+<li class="menu-footer-item"><a href="/sectores/logistica-y-distribucion/">Logística y Distribución</a></li>
+<li class="menu-footer-item"><a href="/sectores/organismos-publicos/">Organismos públicos</a></li>
+<li class="menu-footer-item"><a href="/sectores/farmacia-salud-y-dispositivos-medicos/">Farmacia, salud y dispositivos médicos</a></li>
+<li class="menu-footer-item"><a href="/sectores/tecnologicas-de-producto/">Tecnológicas de producto</a></li>
+<li class="menu-footer-item"><a href="/sectores/servicios-financieros-y-legales/">Servicios financieros y legales</a></li>
+<li class="menu-footer-item"><a href="/sectores/entidades-educativas/">Entidades educativas</a></li>
+</ul>
+</nav>
+<nav class="menu-footer">
+<ul class="menu-footer-list">
+<li class="menu-footer-item menu-footer-title-list mb-4">Productos</li>
+<li class="menu-footer-item"><a href="/cursos/">Cursos</a></li>
+<li class="menu-footer-item"><a href="/carreras/">Carreras</a></li>
+<li class="menu-footer-item"><a href="/cursos/?kind=taller">Talleres</a></li>
+<li class="menu-footer-item"><a href="/cursos/?kind=lab">Laboratorios</a></li>
+<li class="menu-footer-item"><a href="/becas/">Becas</a></li>
+</ul>
+</nav>
+<nav class="menu-footer">
+<ul class="menu-footer-list">
+<li class="menu-footer-title-list mb-4"><span>Acerca de</span></li>
+<li class="menu-footer-item"><a href="/nosotros/">Nosotros</a></li>
+<li class="menu-footer-item"><a href="/profesores/">Profesores</a></li>
+<li class="menu-footer-item"><a href="/contacto/">Contacta</a></li>
+<li class="menu-footer-item"><a href="https://library.openwebinars.net/">Recursos</a></li>
+<li class="menu-footer-item"><a href="/blog/?ref=footer">Blog</a></li>
+<li class="menu-footer-item"><a href="/opiniones/?ref=footer">Opiniones</a></li>
+</ul>
+</nav>
+</div>
+</div>
+<div class="container group-submenu-footer">
+<nav class="submenu-footer">
+<ul class="submenu-footer-list">
+<li class="submenu-footer-item">&copy; 2024 OpenWebinars S.L. todos los derechos reservados</li>
+<li class="submenu-footer-item"><a href="/sitemap/">Mapa del sitio </a></li>
+<li class="submenu-footer-item"><a href="/terminos-condiciones/">Términos y Condiciones de Uso</a></li>
+<li class="submenu-footer-item"><a href="/politica-privacidad/">Política de Privacidad</a> </li>
+<li class="submenu-footer-item"> <a href="/aviso-legal-cookies/">Cookies</a></li>
+</ul>
+</nav>
+<nav class="menu-social-footer">
+<ul class="menu-social-footer-list">
+<li><a class="menu-social-footer-item" target="_blank" href="https://www.facebook.com/openwebinars" rel="noreferrer"><span class="icon-facebook"></span></a></li>
+<li><a class="menu-social-footer-item" target="_blank" href="https://twitter.com/openwebinars" rel="noreferrer" rel="noreferrer"><span class="icon-twitter"></span></a></li>
+<li><a class="menu-social-footer-item" target="_blank" href="https://www.instagram.com/openwebinarsnet/" rel="noreferrer" rel="noreferrer"><span class="icon-instagram"></span></a></li>
+<li><a class="menu-social-footer-item" target="_blank" href="https://es.linkedin.com/company/openwebinars" rel="noreferrer" rel="noreferrer"><span class="icon-linkedin"></span></a></li>
+</ul>
+</nav>
+</div>
+</footer>
+<script type="text/javascript" data-pagespeed-no-defer>pagespeed.lazyLoadImages.overrideAttributeFunctions();</script><script src="/static/public/js/main.js?rev=f79dc3e87"></script>
+<script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+<script>function setCookie(cname,cvalue,exdays){var d=new Date();d.setTime(d.getTime()+(exdays*24*60*60*1000));var expires="expires="+d.toUTCString();document.cookie=cname+"="+cvalue+";"+expires+";path=/";}function getCookie(cname){var name=cname+"=";var decodedCookie=decodeURIComponent(document.cookie);var ca=decodedCookie.split(';');for(var i=0;i<ca.length;i++){var c=ca[i];while(c.charAt(0)==' '){c=c.substring(1);}if(c.indexOf(name)==0){return c.substring(name.length,c.length);}}return"";}function op(e,url){e.stopPropagation();window.location=url;}function localStorageSupport(){return(('localStorage'in window)&&window['localStorage']!==null)}function sessionStorageSupport(){return(('sessionStorage'in window)&&window['sessionStorage']!==null)}(function(){if(localStorageSupport()&&localStorage.queue){queue=localStorage.queue
+$.ajax({url:'/tracker/',method:"PUT",contentType:"application/json",data:queue}).done(function(data){console.debug(queue.action+'@'+queue.current+'='+data)})
+localStorage.queue=''}})()</script>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-NP7728" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Mautic (pixel hack) -->
+<noscript><img src="https://mautic.openwebinars.net/mtracking.gif" alt="Mautic Pixel" height="0" width="0" style="display:none;visibility:hidden" data-pagespeed-no-defer data-pagespeed-url-hash="1098922203"></noscript>
+<!-- End Mautic (pixel hack) -->
+<!-- <script type="text/javascript" src="//platform-api.sharethis.com/js/sharethis.js#property=5aa7d5fb40033c0013635fff&product=sticky-share-buttons" defer></script> -->
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"></script>
+<script src="/static/public/js/copy-clipboard-button.js.pagespeed.jm.7zWpUWn2Q1.js"></script>
+<script>
+  $pre = document.querySelectorAll('pre')
+  window.setTimeout(function (){
+    $pre.forEach(block => {
+      hljs.highlightBlock(block);
+    });
+  }, 1000)
+
+  const quoteSocialSharing = (target) => {
+    const node = document.createElement('div')
+    target.classList.add('m-0', 'border-l-2')
+    node.classList.add('flex', 'justify-end', 'items-center')
+    node.innerHTML = `
+    <small><i>Compartir</i></small>
+    <button class="text-grey-500 ml-4">
+      <span onclick="window.open('https://www.linkedin.com/shareArticle/?title=${target.innerText}&url=${location.href}','_blank','width=600,height=400, top=200,left=400')" class="icon-linkedin ml-2"></span>
+    </button>
+    <button class="text-grey-500 ml-4">
+      <span onclick="window.open('https://twitter.com/intent/tweet?text=${target.innerText}&url=${target.innerText}','_blank','width=600,height=400, top=200,left=400')" class="icon-twitter ml-2"></span>
+    </button>
+    <button class="text-grey-500">
+      <span onclick="window.open('https://www.facebook.com/sharer.php?t=${target.innerText}&u=${target.innerText}','_blank','width=600,height=400, top=200,left=400')" class="icon-facebook ml-2"></span>
+    </button>`
+    target.appendChild(node)
+  }
+
+  window.addEventListener('DOMContentLoaded', (event) => {
+    const quotes = document.querySelectorAll('blockquote[data-social="true"]')
+    quotes.forEach(quote => {
+      quoteSocialSharing(quote)
+    })
+    document.querySelectorAll('blockquote[shareable]').forEach(quote => {
+      quoteSocialSharing(quote)
+    })
+  });
+</script>
+<script src="https://consent.cookiefirst.com/sites/openwebinars.net-28fa73be-2799-4e50-928d-037882ab5523/consent.js"></script>
+</body>
+</html>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const searchBox = document.querySelector('#search input');
+    let isSearching = null
+    searchBox.addEventListener('input', () => {
+      if (searchBox.value.length > 0) {
+        isSearching = sessionStorage.getItem('search');
+        document.querySelector('.main-screen').classList.add('d-none');
+        document.querySelector('.secondary-screen').classList.remove('d-none');
+      } else {
+        document.querySelector('.main-screen').classList.remove('d-none');
+        document.querySelector('.secondary-screen').classList.add('d-none');
+      } 
+      
+    })
+  })
+</script>
+<script src="/static/public/js/algolia-search.js?rev=f79dc3e87"></script>
+<script></script>
+</html>
+<noscript class="psa_add_styles"><link rel="stylesheet" type="text/css" href="/static/public/css/main.css?rev=f79dc3e87"/><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"><link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/atom-one-light.min.css"><link rel="stylesheet" type="text/css" href="/static/public/css/A.copy-clipboard-button.css.pagespeed.cf.Fq0fv9m35E.css"/><style>.async-hide{opacity:0!important}</style><link rel="stylesheet" href="/static/public/css/A.algolia.css,qrev=f79dc3e87.pagespeed.cf.t1YYi4Kxjz.css"></noscript><script data-pagespeed-no-defer>(function(){function b(){var a=window,c=e;if(a.addEventListener)a.addEventListener("load",c,!1);else if(a.attachEvent)a.attachEvent("onload",c);else{var d=a.onload;a.onload=function(){c.call(this);d&&d.call(this)}}};var f=!1;function e(){if(!f){f=!0;for(var a=document.getElementsByClassName("psa_add_styles"),c=0,d;d=a[c];++c)if("NOSCRIPT"==d.nodeName){var k=document.createElement("div");k.innerHTML=d.textContent;document.body.appendChild(k)}}}function g(){var a=window.requestAnimationFrame||window.webkitRequestAnimationFrame||window.mozRequestAnimationFrame||window.oRequestAnimationFrame||window.msRequestAnimationFrame||null;a?a(function(){window.setTimeout(e,0)}):b()}
+var h=["pagespeed","CriticalCssLoader","Run"],l=this;h[0]in l||!l.execScript||l.execScript("var "+h[0]);for(var m;h.length&&(m=h.shift());)h.length||void 0===g?l[m]?l=l[m]:l=l[m]={}:l[m]=g;})();
+pagespeed.CriticalCssLoader.Run();</script>
